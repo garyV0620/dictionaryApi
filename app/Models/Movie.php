@@ -15,17 +15,18 @@ class Movie extends Model
         'city_id',
     ];
 
-    public function actors(){
+    public function actors()
+    {
         return $this->belongsToMany(Actor::class, 'movie_actors');
     }
 
-    public function genras(){
+    public function genras()
+    {
         return $this->belongsToMany(Genra::class, 'movie_genras');
     }
 
-    public function city(){
+    public function city()
+    {
         return $this->belongsTo(City::class);
     }
-
-   
 }

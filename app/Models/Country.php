@@ -10,10 +10,11 @@ class Country extends Model
     use HasFactory;
 
     protected $fillable = [
-        'country_name'
+        'country_name',
     ];
 
-    public function movie(){
+    public function movie()
+    {
         return $this->hasManyThrough(Movie::class, City::class);
     }
 }

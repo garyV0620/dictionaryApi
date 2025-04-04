@@ -52,9 +52,9 @@ class Kernel extends HttpKernel
      *
      * @var array<string, class-string|string>
      */
-    //Register here all the newly created middleware so that you can use it on the Route
+    // Register here all the newly created middleware so that you can use it on the Route
     protected $routeMiddleware = [
-        //the new created middleware
+        // the new created middleware
         'movieToken' => \App\Http\Middleware\MovieToken::class,
         'isValidToken' => \App\Http\Middleware\IsValidToken::class,
         'auth' => \App\Http\Middleware\Authenticate::class,

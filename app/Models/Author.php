@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'name',
         'email',
     ];
+
     // make the many to many relationship using the pivot talbe dictionary_authors
-    public function dictionaries() {
+    public function dictionaries()
+    {
         return $this->belongsToMany(Dictionary::class, 'dictionary_authors');
     }
 }

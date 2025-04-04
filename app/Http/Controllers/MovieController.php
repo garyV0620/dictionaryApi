@@ -18,7 +18,8 @@ class MovieController extends BaseController
     public function index()
     {
         $movie = Movie::all();
-        return $this->sendResponse(MovieResource::collection($movie), "ALL MOVIE HAS FETCHED");
+
+        return $this->sendResponse(MovieResource::collection($movie), 'ALL MOVIE HAS FETCHED');
     }
 
     /**
@@ -45,8 +46,8 @@ class MovieController extends BaseController
         $movie->actors()->attach($validated['actors']);
         $movie->genras()->attach($validated['genras']);
 
-        return $this->sendResponse(new MovieResource($movie), "MOVIE SAVED");
-        }
+        return $this->sendResponse(new MovieResource($movie), 'MOVIE SAVED');
+    }
 
     /**
      * Display the specified resource.
@@ -73,7 +74,6 @@ class MovieController extends BaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

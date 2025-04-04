@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        //run all seeders
+        // run all seeders
         $this->call(MovieTableSeeder::class);
         $this->call(GenraTableSeeder::class);
         $this->call(ActorTableSeeder::class);

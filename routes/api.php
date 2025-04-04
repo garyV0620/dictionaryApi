@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-//added group if you want to group Routes with the same middleware
+// added group if you want to group Routes with the same middleware
 // Route::middleware('isValidToken')->group(function(){
 //     Route::resource('dictionary', Dictionary::class);
 // });
@@ -28,6 +28,6 @@ use Illuminate\Support\Facades\Route;
 // you can use the middleware that you register, then resource for basic operations, only to inlcude what you use
 Route::middleware('isValidToken')->resource('dictionary', Dictionary::class)->only(['index', 'show', 'store', 'update', 'destroy']);
 
-Route::middleware('movieToken')->group( function(){
+Route::middleware('movieToken')->group(function () {
     Route::resource('movie', MovieController::class)->only(['index', 'store']);
 });

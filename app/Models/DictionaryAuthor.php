@@ -1,5 +1,7 @@
 <?php
-//can skip to make this model since it is a pivot table
+
+// can skip to make this model since it is a pivot table
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
