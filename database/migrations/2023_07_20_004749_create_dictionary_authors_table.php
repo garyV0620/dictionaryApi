@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('dictionary_authors', function (Blueprint $table) {
             $table->id();
-            //make it a foreing ID and cascade on delete 
+            // make it a foreing ID and cascade on delete
             $table->foreignId('author_id')->constrained('authors')->cascadeOnDelete();
             $table->foreignId('dictionary_id')->constrained('dictionaries')->cascadeOnDelete();
             $table->timestamps();

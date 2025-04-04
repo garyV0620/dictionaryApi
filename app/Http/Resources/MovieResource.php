@@ -20,17 +20,17 @@ class MovieResource extends JsonResource
             'description' => ucfirst($this->description),
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
-            'genras' => $this->genras->map( function ($genra){
+            'genras' => $this->genras->map(function ($genra) {
                 return [
                     'genra_id' => $genra->id,
                     'category' => $genra->category,
                     'genra_description' => $genra->description,
                 ];
             }),
-            'actors' => $this->actors->map(function($actor){
+            'actors' => $this->actors->map(function ($actor) {
                 return [
                     'actor_id' => $actor->id,
-                    'name' => $actor->first_name . $actor->last_name,
+                    'name' => $actor->first_name.$actor->last_name,
                     'email' => $actor->email,
                 ];
             }),

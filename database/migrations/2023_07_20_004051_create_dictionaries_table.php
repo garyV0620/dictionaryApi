@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //make the dictionary table 
+        // make the dictionary table
         Schema::create('dictionaries', function (Blueprint $table) {
             $table->id();
             $table->string('word');
             $table->text('meaning');
-            //make a column nullabe
+            // make a column nullabe
             $table->string('picture')->nullable();
             $table->timestamps();
         });

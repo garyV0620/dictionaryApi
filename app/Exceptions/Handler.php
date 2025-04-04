@@ -4,7 +4,6 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
-use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -47,7 +46,7 @@ class Handler extends ExceptionHandler
         $this->renderable(function (MethodNotAllowedHttpException $e, $request) {
             if ($request->is('api/*')) {
                 return response()->json([
-                    'message' => 'Invalid Route or Method'
+                    'message' => 'Invalid Route or Method',
                 ], 405);
             }
         });

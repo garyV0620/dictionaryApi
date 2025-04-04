@@ -14,7 +14,8 @@ class City extends Model
         'country_id',
     ];
 
-    public function country(){
+    public function country()
+    {
         return $this->belongsTo(Country::class);
     }
 }

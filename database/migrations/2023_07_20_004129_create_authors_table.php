@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        //make the author table
+        // make the author table
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
             $table->string('name');

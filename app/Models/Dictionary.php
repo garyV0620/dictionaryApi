@@ -14,8 +14,10 @@ class Dictionary extends Model
         'meaning',
         'picture',
     ];
+
     // make the many to many relationship using the pivot talbe dictionary_authors
-    public function authors() {
+    public function authors()
+    {
         return $this->belongsToMany(Author::class, 'dictionary_authors');
     }
 }
